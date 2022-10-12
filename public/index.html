@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link What</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <section class="principal">
+        <div class="divimg">
+            <img src="img/icon.svg" alt="" class="img">
+        </div>
+        <div class="numero">
+            <input type="number" class="indicativo" value="57" id="indicativo">
+            <input type="number" class="numerovalue" id="numero">
+        </div>
+        <div class="boton">
+            <button id="boton" class="enviar">Abrir Chat</button>
+        </div>
+        <a href="www.nolger.com" class="link">www.nolger.com</a>
+    </section>
+    <script>
+        let numero = document.getElementById("numero");
+        let indicativo = document.getElementById("indicativo");
+        document.getElementById("boton").addEventListener("click", enviar);
+        function enviar(){
+            numerowhat = indicativo.value + numero.value;
+            window.open("https://api.whatsapp.com/send?phone=" + numerowhat);
+        }
+    </script>
+</body>
+</html>
